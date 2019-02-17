@@ -1,0 +1,15 @@
+/* Colors */
+$imperial_blue: #05386b;
+$dark_green: #379683;
+$emerald_green: #5cdb95;
+$light_green: #8ee4af;
+$pseudo_white: #edf5e1;
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    -o-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
