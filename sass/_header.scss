@@ -1,3 +1,18 @@
+/* Colors */
+$imperial_blue: #05386b;
+$dark_green: #379683;
+$emerald_green: #5cdb95;
+$light_green: #8ee4af;
+$pseudo_white: #edf5e1;
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    -o-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
 header {
     background-color: #5cdb95;
     padding: 30em, 5em;
@@ -7,27 +22,8 @@ header {
         margin: 3em, 5em;
     }
     
-    a {
-        // Default
-        font-weight: 900;
-        text-decoration: none;
-        
-        // Unique
-        color: rgb(220, 228, 230);
-        
-        // Current tab
-        &.selected {
-            color: #05386b;
-            
-            &:hover {
-                color: coral;
-            }
-        }
-        
-        &:hover {
-            color: white;
-        }
-    }
+    
+    
 }
 
 header#tabs {
@@ -45,5 +41,32 @@ header#tabs {
         $side_margin: 5%;
         margin-left: $side_margin;
         margin-right: $side_margin;
+    }
+    
+    a {
+        // Default
+        font-weight: 900;
+        text-decoration: none;
+        font-family: "Open Sans Condensed", sans-serif;
+        padding: 1em;
+        padding-top: 0;
+        
+        // Unique
+        color: rgb(220, 228, 230);
+        color: $imperial_blue;
+        
+        &:hover {
+            display: inline-block;
+            @include transform(translateY(20px));
+        }
+        
+        // Current tab
+        &.selected {
+            color: coral;
+            
+            &:hover {
+                //transform: none;
+            }
+        }
     }
 }

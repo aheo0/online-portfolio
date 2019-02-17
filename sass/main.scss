@@ -6,9 +6,17 @@
 @import 'header';
 
 $background_color: rgb(244, 245, 247);
+/* Colors */
+$imperial_blue: #05386b;
+$dark_green: #379683;
+$emerald_green: #5cdb95;
+$light_green: #8ee4af;
+$pseudo_white: #edf5e1;
 
 @mixin transform($property) {
     -webkit-transform: $property;
+    -moz-transform: $property;
+    -o-transform: $property;
     -ms-transform: $property;
     transform: $property;
 }
@@ -30,3 +38,5 @@ h1 {
 h2 {
     color: #fff000;
 }
+
+
