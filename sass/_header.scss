@@ -1,0 +1,49 @@
+header {
+    background-color: #5cdb95;
+    padding: 30em, 5em;
+    height: 100px;
+    
+    p {
+        margin: 3em, 5em;
+    }
+    
+    a {
+        // Default
+        font-weight: 900;
+        text-decoration: none;
+        
+        // Unique
+        color: rgb(220, 228, 230);
+        
+        // Current tab
+        &.selected {
+            color: #05386b;
+            
+            &:hover {
+                color: coral;
+            }
+        }
+        
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+header#tabs {
+    a {
+        font-size: 20px;
+        margin-left: 2em;
+    }
+    
+    #header-tabs {
+        position: absolute;
+        top: 4em;
+        left: 40em;
+        
+        // Margin
+        $side_margin: 5%;
+        margin-left: $side_margin;
+        margin-right: $side_margin;
+    }
+}

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import 'header';
+
+$background_color: rgb(244, 245, 247);
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@function sum($a, $b) {
+    @return $a + $b;
+}
+
+
+body {
+    background-color: $background_color;
+}
+
+h1 {
+    color: #ff0000;
+    @include transform(rotate(2deg));
+}
+
+h2 {
+    color: #fff000;
+}
