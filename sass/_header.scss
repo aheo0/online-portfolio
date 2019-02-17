@@ -15,15 +15,15 @@ $pseudo_white: #edf5e1;
 
 header {
     background-color: #5cdb95;
-    padding: 30em, 5em;
     height: 100px;
-    z-index: 1;
+    width: 100%;
+    
+    position: fixed;
+    z-index: 100;
     
     p {
         margin: 3em, 5em;
     }
-    
-    
     
 }
 
