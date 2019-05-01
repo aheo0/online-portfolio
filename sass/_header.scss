@@ -14,8 +14,10 @@ $pseudo_white: #edf5e1;
 }
 
 header {
+    transition: 0.5;
+    
     background-color: #5cdb95;
-    height: 100px;
+    height: 7em;
     width: 100%;
     
     position: fixed;

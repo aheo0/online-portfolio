@@ -5,6 +5,7 @@
 
 @import 'header';
 @import 'footer';
+@import 'sidebar';
 
 $background_color: rgb(244, 245, 247);
 $body_padding: 10%;
@@ -14,6 +15,9 @@ $dark_green: #379683;
 $emerald_green: #5cdb95;
 $light_green: #8ee4af;
 $pseudo_white: #edf5e1;
+
+// Anchor via id offset due to header (7em)
+$anchor_offset: 6.5em;
 
 @mixin transform($property) {
     -webkit-transform: $property;
@@ -27,9 +31,15 @@ $pseudo_white: #edf5e1;
     @return $a + $b;
 }
 
+/* Body */
 
 body {
     background-color: $background_color;
+}
+
+// adjust body for when there is a sidebar
+.body-sidebar {
+    margin-left: 25%;
 }
 
 .body {
@@ -38,70 +48,154 @@ body {
     // Title of Page
     #title {        
         // Location
-        margin-top: 2em;
         padding: 1em;
         
         // Text
         font-size: 50px;
         text-align: center;
+        
+        // Aesthetics
+        border: 5px dotted blue;
     }
-}
-
-h1 {
-    color: #ff0000;
-    @include transform(rotate(2deg));
-}
-
-h2 {
-    color: #fff000;
-}
-
-p {
-    font-size: 20px;
+    
+    // Information on Page
+    #content {
+        padding: 2em;
+        padding-top: 5em;
+        
+        // Anchor Offset for Heading (below)
+        .anchor-offset {            
+            // Anchor offset
+            margin-top: - $anchor_offset;
+            padding-top: 1.5em + $anchor_offset + 0.5em;
+            visibility: none;
+        }
+        
+        // Heading
+        h5 {
+            
+            font-size: 28px;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 1.5em;
+            margin-bottom: 2em;
+            
+            color: $imperial_blue;
+            background-color: #efefff;
+        }
+        
+        // Code or Major Information
+        h6 {
+            
+            font-size: 28px;
+            font-family: monospace;
+            display: block;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            
+            color: $dark-green;
+            
+            // Anchor offset
+            margin-top: 2em - $anchor_offset;
+            padding-top: $anchor_offset;
+        }
+        
+        // Details
+        p {
+            font-size: 24px;
+            font-family: monospace;
+            display: block;
+            padding-left: 7px;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        
+        // Highlight pieces of code
+        .code {
+            background-color: rgb(179, 213, 229);
+            color: black;
+        }
+    }
 }
 
 @import 'grid';
 
+/* Sidebar */
+$padding-sidebar: 3em;
 
-/* Footer */
-footer {
-    background-color: #5cdb95;
-    height: 150px;
-    width: 100% - 2 * $body_padding;
+#sidebar {
+    box-sizing: border-box;
+    height: 100%;
+    width: 25%;
+    z-index: 99;
+    position: fixed;
+    overflow: scroll;
     
-    position: absolute;
-    margin-bottom: 0;
-    margin-top: auto;
-    z-index: 100;
+    background-color: $light_green;
+    border-right: $emerald_green;
     
-    padding-left: $body_padding;
-    padding-right: $body_padding;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding: $padding-sidebar;
+    padding-top: 4.5em + $padding-sidebar;
+    padding-left: 1em + $padding-sidebar;
     
-    // Default for Footer
-    a {
-        // Font
-        font-weight: 900;
+    // Headers
+    .sidebar-header {
+        display: block;
         text-decoration: none;
-        font-family: "Open Sans Condensed", sans-serif;
-        padding: 1em;
-        padding-top: 0;
-
-        // Color
+        
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        
+        font-size: 30px;
+        font-family: "Laila", serif;
         color: $imperial_blue;
-
+        font-weight: 700;
+        
         &:hover {
-            color: coral;
+            color: orangered;
         }
     }
     
-    // Grid Setup
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-column-gap: 3em;
-    
-    .footer-content1{
+    // Links
+    .sidebar-links {
+        display: block;
+        text-decoration: none;
         
+        margin-left: 2em;
+        margin-bottom: 0.2em;
+        margin-right: 15px;
+        
+        font-size: 22px;
+        font-family: "Laila", serif;
+        color: black;
+        
+        
+        &:hover {
+            // Slightly darker than coral
+            color: orangered;
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

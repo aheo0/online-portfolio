@@ -141,3 +141,119 @@ footer {
     color: #05386b; }
     footer a:hover {
       color: coral; }
+
+/* Flux */
+.flux-body {
+  background-image: url(https://www.planwallpaper.com/static/images/2ba7dbaa96e79e4c81dd7808706d2bb7_large.jpeg);
+  height: 1000px; }
+
+.flux-account {
+  background-color: #0a0a0a;
+  opacity: 0.9;
+  width: 72%;
+  height: 42%;
+  position: absolute;
+  top: 27em;
+  left: 13em;
+  padding: 4em;
+  z-index: 2; }
+  .flux-account h2 {
+    margin-bottom: 2em;
+    font-size: 30px; }
+  .flux-account p {
+    color: aliceblue;
+    width: 35%;
+    font-family: sans-serif;
+    font-size: 25px; }
+  .flux-account .flux-input {
+    margin: 1em;
+    margin-top: 6em;
+    border-color: aqua;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 11px;
+    width: 30%;
+    opacity: 1;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+    .flux-account .flux-input p {
+      width: 100%;
+      font-family: fantasy;
+      text-align: center; }
+
+.flux-login {
+  background-color: beige;
+  width: 35%;
+  height: 47%;
+  position: absolute;
+  top: 24em;
+  left: 52em;
+  padding: 5em;
+  z-index: 3; }
+  .flux-login h3 {
+    margin-top: 2em;
+    font-size: 30px;
+    margin-bottom: 3em; }
+  .flux-login p {
+    color: black;
+    font-size: 20px;
+    width: 87%;
+    padding: 7px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    margin-bottom: 3em; }
+  .flux-login a {
+    font-size: 20px;
+    color: darkslateblue;
+    font-family: "Open Sans Serif"; }
+    .flux-login a:hover {
+      text-decoration: none; }
+  .flux-login button {
+    margin-left: 13em;
+    padding: 1em; }
+
+/* Flex 2 */
+.flex-account {
+  padding-left: 8em;
+  width: 45%;
+  z-index: 12; }
+  .flex-account h3 {
+    font-size: 40px;
+    display: inline;
+    font-family: sans-serif;
+    font-weight: 400; }
+  .flex-account #flex-name2 {
+    color: cornflowerblue; }
+  .flex-account p {
+    font-size: 23px;
+    font-family: sans-serif;
+    margin-top: 4.5em;
+    padding-left: 2em;
+    margin-bottom: 4em; }
+  .flex-account input {
+    display: block;
+    margin-bottom: 3em;
+    padding: 15px 13px;
+    font-size: 20px;
+    color: black;
+    width: 83%; }
+  .flex-account button {
+    padding: 19px 58px;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 20px;
+    border-radius: 30px; }
+
+.flex-background {
+  background-image: url(https://cdn5.vectorstock.com/i/1000x1000/05/94/fishing-boat-sunset-background-concept-vector-9490594.jpg);
+  position: absolute;
+  top: 10%;
+  left: 45%;
+  height: 1000px;
+  width: 55%;
+  z-index: -1;
+  margin-bottom: 1000px; }
+
+.flex-space {
+  margin: 100em; }
