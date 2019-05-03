@@ -1,0 +1,12 @@
+.pics-gallery {
+  width: 80em;
+  height: 30em;
+  overflow: hidden;
+}
+
+button {
+  width: 5em;
+  height: 5em;
+}
+
+/*# sourceMappingURL=gallery.css.map */
